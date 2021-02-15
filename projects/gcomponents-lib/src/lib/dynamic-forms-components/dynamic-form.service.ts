@@ -1,12 +1,12 @@
+import { DatePipe } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { SettingsService } from 'src/app/services/settings.service';
 import { FieldConfig, FieldType } from './field.interface';
 
 @Injectable({ providedIn: 'root' })
 export class DynamicFormService {
 
-  constructor(private formBuilder: FormBuilder, private settings: SettingsService) { }
+  constructor(private formBuilder: FormBuilder, private datePipe: DatePipe,) { }
 
   selectedKeyValue = {};
 
@@ -148,7 +148,7 @@ export class DynamicFormService {
       const data = form.value;
       fields.forEach(field => {
         if (field.type === FieldType.date) {
-          data[field.key] = this.settings.formatDate(data[field.key], field.dateFormat);
+          data[field.key] = this.datePipe.transform(data[field.key], field.dateFormat || 'dd/MM/yyyy');
         }
       });
       return data;

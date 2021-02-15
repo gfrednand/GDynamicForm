@@ -2,8 +2,6 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, } from '@ang
 import { FormGroup } from '@angular/forms';
 import { isObservable } from 'rxjs';
 import { first, map } from 'rxjs/operators';
-import { SettingsService } from 'src/app/services/settings.service';
-import { fadeIn } from 'src/app/shared/animations/basic-animations';
 import { DynamicFormService } from '../dynamic-form.service';
 import { FieldConfig, FieldType } from '../field.interface';
 
@@ -29,7 +27,7 @@ import { FieldConfig, FieldType } from '../field.interface';
       </div>
     </form>
   `,
-    animations: [fadeIn],
+    animations: [],
     styles: [],
 })
 export class MainDynamicFormComponent implements OnInit, OnChanges {
@@ -47,7 +45,7 @@ export class MainDynamicFormComponent implements OnInit, OnChanges {
     get value() {
         return this.form.value;
     }
-    constructor(private settings: SettingsService, private dynamicFormService: DynamicFormService) { }
+    constructor(private dynamicFormService: DynamicFormService) { }
 
     ngOnInit() {
         // this.form = this.form && Object.keys(this.form.controls).length > 0 ? this.form : this.dynamicFormService.createControl(this.fields, this.formData);
