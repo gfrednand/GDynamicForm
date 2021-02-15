@@ -1,11 +1,11 @@
 {
-  "name": "gdynamic-form",
-  "version": "0.0.0",
+  "name": "@gfrednand/dynamic-form",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "exit 0",
     "lint": "ng lint"
   },
   "private": true,
@@ -41,5 +41,17 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gfrednand/GDynamicForm.git"
+  },
+  "author": "Gilbert Chami",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gfrednand/GDynamicForm/issues"
+  },
+  "homepage": "https://github.com/gfrednand/GDynamicForm#readme"
 }
