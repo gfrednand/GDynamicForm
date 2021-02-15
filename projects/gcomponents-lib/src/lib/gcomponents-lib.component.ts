@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'cmpts-GComponentsLib',
+  selector: 'app-GComponentsLib',
   template: `
     <p>
       gcomponents-lib works!
